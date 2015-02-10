@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1427721A8761D70072C655 /* EnglishWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1427711A8761D70072C655 /* EnglishWord.swift */; };
+		8C1427741A8762AC0072C655 /* WordsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1427731A8762AC0072C655 /* WordsDelegate.swift */; };
 		8CD13DDE1A85FD3400D0B763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13DDD1A85FD3400D0B763 /* AppDelegate.swift */; };
 		8CD13DE11A85FD3400D0B763 /* Recite_Word_Alpha_Version.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13DDF1A85FD3400D0B763 /* Recite_Word_Alpha_Version.xcdatamodeld */; };
 		8CD13DE31A85FD3400D0B763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13DE21A85FD3400D0B763 /* ViewController.swift */; };
@@ -14,6 +16,7 @@
 		8CD13DE81A85FD3400D0B763 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13DE71A85FD3400D0B763 /* Images.xcassets */; };
 		8CD13DEB1A85FD3400D0B763 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13DE91A85FD3400D0B763 /* LaunchScreen.xib */; };
 		8CD13DF71A85FD3400D0B763 /* Recite_Word_Alpha_VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13DF61A85FD3400D0B763 /* Recite_Word_Alpha_VersionTests.swift */; };
+		8CD13E011A860B8000D0B763 /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13E001A860B8000D0B763 /* TVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C1427711A8761D70072C655 /* EnglishWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishWord.swift; sourceTree = "<group>"; };
+		8C1427731A8762AC0072C655 /* WordsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsDelegate.swift; sourceTree = "<group>"; };
 		8CD13DD81A85FD3400D0B763 /* Recite_Word_Alpha_Version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recite_Word_Alpha_Version.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD13DDC1A85FD3400D0B763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD13DDD1A85FD3400D0B763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		8CD13DF01A85FD3400D0B763 /* Recite_Word_Alpha_VersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Recite_Word_Alpha_VersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD13DF51A85FD3400D0B763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD13DF61A85FD3400D0B763 /* Recite_Word_Alpha_VersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recite_Word_Alpha_VersionTests.swift; sourceTree = "<group>"; };
+		8CD13E001A860B8000D0B763 /* TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				8CD13DDD1A85FD3400D0B763 /* AppDelegate.swift */,
+				8C1427731A8762AC0072C655 /* WordsDelegate.swift */,
+				8C1427711A8761D70072C655 /* EnglishWord.swift */,
+				8CD13E001A860B8000D0B763 /* TVC.swift */,
 				8CD13DE21A85FD3400D0B763 /* ViewController.swift */,
 				8CD13DE41A85FD3400D0B763 /* Main.storyboard */,
 				8CD13DE71A85FD3400D0B763 /* Images.xcassets */,
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1427721A8761D70072C655 /* EnglishWord.swift in Sources */,
 				8CD13DE31A85FD3400D0B763 /* ViewController.swift in Sources */,
+				8C1427741A8762AC0072C655 /* WordsDelegate.swift in Sources */,
 				8CD13DDE1A85FD3400D0B763 /* AppDelegate.swift in Sources */,
 				8CD13DE11A85FD3400D0B763 /* Recite_Word_Alpha_Version.xcdatamodeld in Sources */,
+				8CD13E011A860B8000D0B763 /* TVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Recite_Word_Alpha_Version/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Recite_Word_Alpha_Version/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +423,7 @@
 				8CD13DFC1A85FD3400D0B763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CD13DFD1A85FD3400D0B763 /* Build configuration list for PBXNativeTarget "Recite_Word_Alpha_VersionTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +432,7 @@
 				8CD13DFF1A85FD3400D0B763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
