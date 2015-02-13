@@ -8,32 +8,28 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, UITableViewDataSource, ParamsProtocol {
+class TVC: UITableViewController, UITableViewDataSource {
     
+    
+    @IBOutlet var TV: UITableView!
     
     var Eword = [String]()
     var Cwords = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        TV.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    func returnParams(EnStr: String, ChStr: String) {
-        Eword.append(EnStr)
-        Cwords.append(ChStr)
-    }
-        
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        self.TV.reloadData()
     }
 
     // MARK: - Table view data source

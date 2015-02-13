@@ -8,16 +8,13 @@
 
 import UIKit
 
-protocol ParamsProtocol{
-    func returnParams(EnStr :String,ChStr :String)
-}
     
 class ViewController: UIViewController {
 
     var chineseWords :String!
     var englishWords :String!
-    var nw :EnglishWord!
-    var paramsProtocolDelegate: ParamsProtocol?
+    var OrialE = [String]()
+    var Cexplaination = [String]()
     
     @IBAction func addWords(sender: AnyObject) {
         var alert = UIAlertController(title: "新单词", message: "请输入添加入单词本的单词", preferredStyle: UIAlertControllerStyle.Alert)
@@ -30,7 +27,7 @@ class ViewController: UIViewController {
             
             println("用户添加了")
             println(self.englishWords)
-            self.performSegueWithIdentifier("TVC", sender: self)
+           self.OrialE.append(self.englishWords)
         }
         
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
@@ -43,11 +40,13 @@ class ViewController: UIViewController {
         
     }
     
-    func start(){
-        self.paramsProtocolDelegate?.returnParams(englishWords, ChStr: chineseWords)
-       
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "TVC"{
+            var obj = segue.destinationViewController as TViewController
+            obj.Ewords = self.OrialE
+            obj.Cwords = self.Cexplaination
+        }
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +73,7 @@ class ViewController: UIViewController {
                 var wordexplains :AnyObject = explains.objectForKey("explains")!
                 var ManyExplains :String = wordexplains[0] as String
                 self.chineseWords = ManyExplains
-                self.nw.ChineseEP = self.chineseWords
+                self.Cexplaination.append(self.chineseWords)
                 println(self.chineseWords)
         }
         
