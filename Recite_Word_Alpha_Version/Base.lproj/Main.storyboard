@@ -37,6 +37,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="usb-iW-XFB">
+                        <barButtonItem key="leftBarButtonItem" title="关于" id="JQ0-s5-wWP">
+                            <connections>
+                                <segue destination="vMz-7X-t64" kind="push" id="sWB-Mc-SOL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dYb-Za-v0z">
                             <connections>
                                 <action selector="addWords:" destination="vXZ-lx-hvc" id="mhy-c5-KYs"/>
@@ -61,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="T11-ow-5wM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="bXO-Bc-Jxq" id="1Cl-bp-nSl"/>
@@ -77,7 +82,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nz-7T-GVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="394"/>
+            <point key="canvasLocation" x="791" y="394"/>
+        </scene>
+        <!--关于本软件-->
+        <scene sceneID="q0o-vC-F9i">
+            <objects>
+                <viewController id="vMz-7X-t64" customClass="AboutViewController" customModule="Recite_Word_Alpha_Version" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cqt-17-YKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="gmK-dN-Xf1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qqc-rl-Icf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="关于本软件" id="gZg-h8-gRE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOZ-NG-pH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="1107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ka-07-mjc">
