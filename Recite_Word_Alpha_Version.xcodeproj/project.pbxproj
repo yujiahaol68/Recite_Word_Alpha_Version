@@ -10,6 +10,9 @@
 		1D58423E1A8E287500A02B3D /* TViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D58423D1A8E287500A02B3D /* TViewController.swift */; };
 		1DA55BAB1A8F7A92005B9B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA55BA91A8F7A92005B9B15 /* Main.storyboard */; };
 		1DAC0CDA1A9C79A700A6D32D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAC0CD91A9C79A700A6D32D /* AboutViewController.swift */; };
+		1DAD26671A9E21A100966577 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD26661A9E21A100966577 /* Word.swift */; };
+		1DF67C871AA065DF002518C7 /* ModeChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF67C861AA065DF002518C7 /* ModeChooseViewController.swift */; };
+		1DF67C891AA066F0002518C7 /* SpellCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF67C881AA066F0002518C7 /* SpellCheckViewController.swift */; };
 		8C1427721A8761D70072C655 /* EnglishWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1427711A8761D70072C655 /* EnglishWord.swift */; };
 		8C1427741A8762AC0072C655 /* WordsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1427731A8762AC0072C655 /* WordsDelegate.swift */; };
 		8CD13DDE1A85FD3400D0B763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD13DDD1A85FD3400D0B763 /* AppDelegate.swift */; };
@@ -34,6 +37,9 @@
 		1D58423D1A8E287500A02B3D /* TViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TViewController.swift; sourceTree = "<group>"; };
 		1DA55BAA1A8F7A92005B9B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DAC0CD91A9C79A700A6D32D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1DAD26661A9E21A100966577 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		1DF67C861AA065DF002518C7 /* ModeChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeChooseViewController.swift; sourceTree = "<group>"; };
+		1DF67C881AA066F0002518C7 /* SpellCheckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellCheckViewController.swift; sourceTree = "<group>"; };
 		8C1427711A8761D70072C655 /* EnglishWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnglishWord.swift; sourceTree = "<group>"; };
 		8C1427731A8762AC0072C655 /* WordsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsDelegate.swift; sourceTree = "<group>"; };
 		8CD13DD81A85FD3400D0B763 /* Recite_Word_Alpha_Version.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recite_Word_Alpha_Version.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				8CD13DDD1A85FD3400D0B763 /* AppDelegate.swift */,
+				1DF67C881AA066F0002518C7 /* SpellCheckViewController.swift */,
+				1DF67C861AA065DF002518C7 /* ModeChooseViewController.swift */,
 				1DAC0CD91A9C79A700A6D32D /* AboutViewController.swift */,
 				8C1427731A8762AC0072C655 /* WordsDelegate.swift */,
 				8C1427711A8761D70072C655 /* EnglishWord.swift */,
@@ -97,6 +105,7 @@
 				8CD13DE71A85FD3400D0B763 /* Images.xcassets */,
 				8CD13DE91A85FD3400D0B763 /* LaunchScreen.xib */,
 				8CD13DDF1A85FD3400D0B763 /* Recite_Word_Alpha_Version.xcdatamodeld */,
+				1DAD26661A9E21A100966577 /* Word.swift */,
 				8CD13DDB1A85FD3400D0B763 /* Supporting Files */,
 			);
 			path = Recite_Word_Alpha_Version;
@@ -228,11 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1427721A8761D70072C655 /* EnglishWord.swift in Sources */,
+				1DAD26671A9E21A100966577 /* Word.swift in Sources */,
 				1D58423E1A8E287500A02B3D /* TViewController.swift in Sources */,
 				8CD13DE31A85FD3400D0B763 /* ViewController.swift in Sources */,
+				1DF67C871AA065DF002518C7 /* ModeChooseViewController.swift in Sources */,
 				1DAC0CDA1A9C79A700A6D32D /* AboutViewController.swift in Sources */,
 				8C1427741A8762AC0072C655 /* WordsDelegate.swift in Sources */,
 				8CD13DDE1A85FD3400D0B763 /* AppDelegate.swift in Sources */,
+				1DF67C891AA066F0002518C7 /* SpellCheckViewController.swift in Sources */,
 				8CD13DE11A85FD3400D0B763 /* Recite_Word_Alpha_Version.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

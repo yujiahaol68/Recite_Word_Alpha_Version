@@ -11,6 +11,8 @@ import CoreData
     
 class ViewController: UIViewController {
 
+    @IBOutlet weak var wordsBook: UIButton!
+    @IBOutlet weak var startToRecite: UIButton!
     var Word = [NSManagedObject]()
     var chineseWords :String!
     var englishWords :String!
@@ -18,7 +20,6 @@ class ViewController: UIViewController {
     var cexplaination = [String]()
     
     @IBAction func addWords(sender: AnyObject) {
-        var warning = UIAlertController(title: "警告", message: "输入单词不能为空", preferredStyle: UIAlertControllerStyle.Alert)
         var alert = UIAlertController(title: "新单词", message: "请输入添加入单词本的单词", preferredStyle: UIAlertControllerStyle.Alert)
         let saveAction = UIAlertAction(title: "保存", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
         let textField = alert.textFields![0] as UITextField
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -98,6 +100,7 @@ class ViewController: UIViewController {
                     self.orialE.append(self.englishWords)
                     self.saveWord()
                     println(self.chineseWords)
+                    self.succeedGetWord()
                 }
                 else {
                     self.Failtogetword()
@@ -109,11 +112,17 @@ class ViewController: UIViewController {
 
     func Failtogetword(){
         let warnAlert = UIAlertController(title: "警告", message: "亲，不要调皮哟？！", preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "下次不会再犯了", style: UIAlertActionStyle.Default, handler: nil)
+        let action = UIAlertAction(title: "T_T下次不会再犯了", style: UIAlertActionStyle.Default, handler: nil)
         warnAlert.addAction(action)
         presentViewController(warnAlert, animated: true, completion: nil)
     }
     
+    func succeedGetWord(){
+        var alert = UIAlertController(title: "添加成功", message: "\(self.englishWords)\n\(self.chineseWords) ", preferredStyle: UIAlertControllerStyle.Alert)
+        var action = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
     
 }
