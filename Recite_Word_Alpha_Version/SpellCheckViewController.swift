@@ -10,6 +10,14 @@ import UIKit
 
 class SpellCheckViewController: UIViewController {
 
+    @IBOutlet weak var wordTextDispaly: UITextView!
+    @IBOutlet weak var characterRemain: UITextView!
+    @IBOutlet weak var rightWrongImg: UIImageView!
+    
+    @IBOutlet weak var userTextField: UITextField!
+    
+    @IBAction func submitUserWord(sender: AnyObject) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
