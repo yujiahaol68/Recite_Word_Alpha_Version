@@ -28,10 +28,10 @@ class ModeChooseViewController: UIViewController {
     }
     
     func wordCountCheck() -> Int{                  //单词个数检查
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest = NSFetchRequest(entityName: "Word")   //获取查询结果
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil) as [Word]?
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: nil) as! [Word]?
         let wordCount = fetchedResults?.count
         return wordCount!
     }

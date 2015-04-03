@@ -83,12 +83,12 @@ class TViewController: UIViewController,UITableViewDataSource {
     }
     
     func fetchData(){
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         let fetchRequest = NSFetchRequest(entityName: "Word")
         var error: NSError?
         
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [Word]?
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as! [Word]?
         if let results = fetchedResults {
             Words = results
             for i in 0..<self.Words.count{
@@ -104,7 +104,7 @@ class TViewController: UIViewController,UITableViewDataSource {
     
     func delateData(row :Int){
       let wordToRemove = Words[row] as Word
-      let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
       let managedContext = appDelegate.managedObjectContext!
       let fetchRequest = NSFetchRequest(entityName: "Word")
       managedContext.deleteObject(wordToRemove)

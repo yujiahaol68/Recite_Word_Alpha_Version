@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBAction func addWords(sender: AnyObject) {
         var alert = UIAlertController(title: "新单词", message: "请输入添加入单词本的单词", preferredStyle: UIAlertControllerStyle.Alert)
         let saveAction = UIAlertAction(title: "保存", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
-        let textField = alert.textFields![0] as UITextField
+        let textField = alert.textFields![0] as! UITextField
         textField.clearButtonMode = UITextFieldViewMode.Always
         self.englishWords = textField.text
         var content:String = textField.text
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     }
     
     func saveWord(){
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext!
         
@@ -92,9 +92,9 @@ class ViewController: UIViewController {
                 var JsonResult:AnyObject! = NSJSONSerialization.JSONObjectWithData(Data, options: NSJSONReadingOptions.AllowFragments, error: &derror)
                 var translation :AnyObject = JsonResult.objectForKey("translation")!
                 if  let explains :AnyObject = JsonResult.objectForKey("basic"){
-                    var word :String = translation[0] as String
+                    var word :String = translation[0] as! String
                     var wordexplains :AnyObject = explains.objectForKey("explains")!
-                    var ManyExplains :String = wordexplains[0] as String
+                    var ManyExplains :String = wordexplains[0] as! String
                     self.chineseWords = ManyExplains
                     self.cexplaination.append(self.chineseWords)
                     self.orialE.append(self.englishWords)
